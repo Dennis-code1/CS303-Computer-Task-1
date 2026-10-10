@@ -16,11 +16,11 @@ import javax.swing.Timer;
 public class JRotation extends JPanel {
 
     private double angle = 0.0;
-    private boolean rotating = true;
+    private boolean rotating = false;
 
     public JRotation() {
         setPreferredSize(new Dimension(600, 450));
-        setBackground(Color.WHITE);
+        setBackground(Color.RED);
 
         // Allow this panel to receive keyboard input.
         setFocusable(true);
@@ -28,7 +28,7 @@ public class JRotation extends JPanel {
         // Create the rotation timer.
         Timer timer = new Timer(16, e -> {
             if (rotating) {
-                angle += Math.toRadians(2);
+                angle += Math.toRadians(20);
 
                 if (angle >= 2 * Math.PI) {
                     angle -= 2 * Math.PI;
@@ -65,19 +65,19 @@ public class JRotation extends JPanel {
         int centerX = getWidth() / 2;
         int centerY = getHeight() / 2;
 
-        g2.setFont(new Font("Arial", Font.BOLD, 220));
-        g2.setColor(Color.BLACK);
+        g2.setFont(new Font("San Serif", Font.BOLD, 90));
+        g2.setColor(Color.BLUE);
 
         FontMetrics fm = g2.getFontMetrics();
 
-        int x = centerX - fm.stringWidth("J") / 2;
+        int x = centerX - fm.stringWidth("Hello Joshua") / 2;
         int y = centerY
                 + (fm.getAscent() - fm.getDescent()) / 2;
 
         AffineTransform originalTransform = g2.getTransform();
 
         g2.rotate(angle, centerX, centerY);
-        g2.drawString("J", x, y);
+        g2.drawString("Hello Joshua", x, y);
 
         g2.setTransform(originalTransform);
         g2.dispose();
@@ -86,7 +86,7 @@ public class JRotation extends JPanel {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame =
-                new JFrame("2D Rotation of Letter J");
+                new JFrame("2D Rotation of Letter Hello Joshua");
 
             frame.setDefaultCloseOperation(
                 JFrame.EXIT_ON_CLOSE

@@ -15,9 +15,11 @@ import javax.swing.Timer;
 
 public class JRotation extends JPanel {
 
+    //enable / disable rotation 
     private double angle = 0.0;
     private boolean rotating = true;
 
+    // Color background & Size 
     public JRotation() {
         setPreferredSize(new Dimension(600, 450));
         setBackground(Color.BLACK);
@@ -28,7 +30,7 @@ public class JRotation extends JPanel {
         // Create the rotation timer.
         Timer timer = new Timer(16, e -> {
             if (rotating) {
-                angle += Math.toRadians(2);
+                angle += Math.toRadians(50);
 
                 if (angle >= 2 * Math.PI) {
                     angle -= 2 * Math.PI;
@@ -65,6 +67,7 @@ public class JRotation extends JPanel {
         int centerX = getWidth() / 2;
         int centerY = getHeight() / 2;
 
+        // Change on Style  on &  size of the character
         g2.setFont(new Font("Arial", Font.BOLD, 220));
         g2.setColor(Color.WHITE);
 
@@ -75,8 +78,10 @@ public class JRotation extends JPanel {
                 + (fm.getAscent() - fm.getDescent()) / 2;
 
         AffineTransform originalTransform = g2.getTransform();
+// Work on 90 degree g2.rotate(Math.toRadians(angdeeg:90,180,360)
+g2.rotate(Math.toRadians(90), centerX, centerY);
 
-        g2.rotate(angle, centerX, centerY);
+// changing the character "J"
         g2.drawString("J", x, y);
 
         g2.setTransform(originalTransform);
@@ -85,6 +90,8 @@ public class JRotation extends JPanel {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
+            // CChanging the title 
+            
             JFrame frame =
                 new JFrame("2D Rotation of Letter J");
 

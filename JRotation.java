@@ -20,7 +20,7 @@ public class JRotation extends JPanel {
 
     public JRotation() {
         setPreferredSize(new Dimension(600, 450));
-        setBackground(Color.WHITE);
+        setBackground(Color.BLACK);
 
         // Allow this panel to receive keyboard input.
         setFocusable(true);
@@ -66,7 +66,7 @@ public class JRotation extends JPanel {
         int centerY = getHeight() / 2;
 
         g2.setFont(new Font("Arial", Font.BOLD, 220));
-        g2.setColor(Color.BLACK);
+        g2.setColor(Color.WHITE);
 
         FontMetrics fm = g2.getFontMetrics();
 

@@ -85,7 +85,7 @@ public class JRotation extends JPanel {
         int y = centerY + (metrics.getAscent() - metrics.getDescent()) / 2;
 
         // Rotate around the center of the panel.
-        // Math.toRadians converts the angle from degrees to radians.
+        //Math.toRadians converts the angle from degrees to radians.
         g2.rotate(Math.toRadians(angle), centerX, centerY);
 
         // Draw the letter.

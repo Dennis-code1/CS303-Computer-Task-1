@@ -16,7 +16,7 @@ public class JRotation extends JPanel {
     // 180 = starts upside down
     // 270 = starts rotated by 270 degrees
 
-    private final double rotationSpeed = 29;
+    private final double rotationSpeed = 2;
     // CHANGE: Rotation speed.
     // 1 = slow, 2 = normal, 5 = faster, 10 = very fast.
 

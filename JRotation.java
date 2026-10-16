@@ -25,7 +25,7 @@ public class JRotation extends JPanel {
     // false = rotation starts paused.
 
     private final int panelWidth = 600;
-    private final int panelHeight = 450;
+    private final int panelHeight = 560;
     // CHANGE: Window/panel size.
     // Increase these values to make the drawing area bigger.
 
@@ -35,11 +35,11 @@ public class JRotation extends JPanel {
     private final String fontName = "Arial";
     // CHANGE: Font type. Example: "Serif", "Monospaced".
 
-    private final int fontSize = 220;
+    private final int fontSize = 520;
     // CHANGE: Letter size.
     // Increase to make the letter bigger; decrease to make it smaller.
 
-    private final Color letterColor = Color.WHITE;
+    private final Color letterColor = Color.RED;
     // CHANGE: Letter color. Examples: Color.RED, Color.BLUE, Color.GREEN.
 
     private final Color backgroundColor = Color.BLACK;
@@ -66,7 +66,7 @@ public class JRotation extends JPanel {
             // Smaller value = more frequent updates.
 
             if (rotating) {
-                angle += rotationSpeed;
+                angle += rotationSpeed -5;
                 // Adds the rotation speed to the current angle.
 
                 if (angle >= 360) {
@@ -117,6 +117,7 @@ public class JRotation extends JPanel {
 
         // FIND THE CENTER OF THE PANEL.
         int centerX = getWidth() / 2;
+    // int centerX = getWidth() *3/4; :: For  right side rotation
         int centerY = getHeight() / 2;
         // CHANGE: These values control the rotation center.
         // / 2 finds the middle of the panel.

@@ -9,7 +9,7 @@ public class JRotation extends JPanel {
     // SECTION 1: SETTINGS YOU CAN CHANGE IN AN EXAM
     // ==================================================
 
-    private double angle = 0;
+    private double angle = 180;
     // CHANGE: Starting angle of the letter.
     // 0 = normal starting position
     // 90 = starts rotated by 90 degrees
@@ -69,8 +69,8 @@ public class JRotation extends JPanel {
                 angle += rotationSpeed -5;
                 // Adds the rotation speed to the current angle.
 
-                if (angle >= 360) {
-                    angle -= 360;
+                if (angle >= 180) {
+                    angle -= 180;
                 }
                 // Keeps the angle within the 0–359 degree range.
 

@@ -9,14 +9,14 @@ public class JRotation extends JPanel {
     // SECTION 1: SETTINGS YOU CAN CHANGE IN AN EXAM
     // ==================================================
 
-    private double angle = 180;
+    private double angle = 0;
     // CHANGE: Starting angle of the letter.
     // 0 = normal starting position
     // 90 = starts rotated by 90 degrees
     // 180 = starts upside down
     // 270 = starts rotated by 270 degrees
 
-    private final double rotationSpeed = 2;
+    private final double rotationSpeed = 7;
     // CHANGE: Rotation speed.
     // 1 = slow, 2 = normal, 5 = faster, 10 = very fast.
 

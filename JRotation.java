@@ -16,7 +16,7 @@ public class JRotation extends JPanel {
     // 180 = starts upside down
     // 270 = starts rotated by 270 degrees
 
-    private final double rotationSpeed = 7;
+    private final double rotationSpeed = 3;
     // CHANGE: Rotation speed.
     // 1 = slow, 2 = normal, 5 = faster, 10 = very fast.
 
@@ -39,10 +39,10 @@ public class JRotation extends JPanel {
     // CHANGE: Letter size.
     // Increase to make the letter bigger; decrease to make it smaller.
 
-    private final Color letterColor = Color.RED;
+    private final Color letterColor = Color.yellow;
     // CHANGE: Letter color. Examples: Color.RED, Color.BLUE, Color.GREEN.
 
-    private final Color backgroundColor = Color.BLACK;
+    private final Color backgroundColor = Color.green;
     // CHANGE: Background color. Examples: Color.WHITE, Color.GRAY.
 
     // ==================================================

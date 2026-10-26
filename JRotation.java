@@ -39,7 +39,7 @@ public class JRotation extends JPanel {
     // CHANGE: Letter size.
     // Increase to make the letter bigger; decrease to make it smaller.
 
-    private final Color letterColor = Color.yellow;
+    private final Color letterColor = Color.BLACK;
     // CHANGE: Letter color. Examples: Color.RED, Color.BLUE, Color.GREEN.
 
     private final Color backgroundColor = Color.green;
